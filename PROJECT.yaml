@@ -1,0 +1,304 @@
+project:
+  name: Spectra AI Digital Marketing Platform
+  description: Website-driven organic and paid marketing for a unified Spectra Technologies identity
+  objective: Generate accurate branded content, publish through approved policies, and measure business
+    outcomes
+  background: Three company websites provide product and service knowledge; centralize marketing without
+    creating separate social identities
+  owner: Spectra Technologies Pvt. Ltd.
+  type: Internal enterprise web application
+  profiles:
+  - Standard full-stack web
+  - Enterprise
+  - AI/RAG
+  - CLI/automation
+  stage: MVP then controlled pilot
+  mode: New Project; inspect workspace first
+  target_users:
+  - Marketing team
+  - Management
+  - IT administrators
+  user_roles:
+  - Admin
+  - Marketing manager
+  - Editor
+  - Approver
+  - Analyst
+  business_requirements:
+  - One organization, one public brand, four platform accounts
+  - 'Three configurable knowledge sources: https://ziu.in/, https://www.spectracloud.com/, https://spectraindia.com/'
+  - 12 image posts and 2 videos monthly, shared across eligible platforms
+  - Organic publishing and Meta paid campaigns with separate budgets
+  core_features:
+  - Knowledge synchronization
+  - Product/service catalog and evidence
+  - Brand library
+  - AI strategy and content studio
+  - Video templates
+  - Calendar and approvals
+  - Social OAuth and publishing
+  - Meta Ads and boosting
+  - Analytics and audit
+  - Cost controls
+  optional_features:
+  - Carousels
+  - Trend research
+  - Premium generated video
+  - Policy-authorized organic autopilot
+  future_features:
+  - Multi-tenant SaaS
+  - Billing and subscriptions
+  - Agency features
+  - Advanced attribution
+  out_of_scope:
+  - Separate ZIU/SpectraCloud social identities
+  - E-commerce checkout or inventory writes
+  - Unapproved ad spending
+  - Public registration and billing for pilot
+  existing_system: Three websites; backend access, APIs and credentials unconfirmed
+  reference_applications:
+  - Meta Ads Manager (workflow reference)
+  - Buffer (workflow reference)
+  success_metrics:
+  - Approved content accuracy
+  - On-time delivery and duplicate prevention
+  - Generation cost per accepted asset
+  - Traffic, qualified leads and sales where measurable
+technology:
+  frontend:
+    framework: Next.js
+    language: TypeScript
+    styling: Tailwind CSS
+    component_library: shadcn/ui
+    state_management: TanStack Query + local state; justify extras
+  backend:
+    framework: FastAPI
+    language: Python
+    api_style: REST / OpenAPI
+    architecture: Modular monolith with isolated workers
+  database:
+    primary: PostgreSQL
+    orm: SQLAlchemy + Alembic
+    cache: Redis for queue/coordination; cache only justified data
+    search_engine: PostgreSQL full text
+    vector_database: pgvector if retrieval evaluation justifies
+  authentication:
+    method: Invite-only secure sessions or approved OIDC
+    authorization: Server-side RBAC + organization scope
+    oauth_providers:
+    - Social platform OAuth for integrations, separate from login
+    mfa: Required for privileged roles; confirm approved method
+    sso: false
+  storage:
+    provider: S3-compatible object storage or approved internal storage
+    media_storage: Private originals and controlled public delivery for platforms
+  integrations:
+    email: Approved SMTP; mock by default
+    sms: false
+    whatsapp: false
+    payments: false
+    analytics: true
+    ai: true
+    external_apis:
+    - Meta Graph/Instagram
+    - Meta Marketing
+    - LinkedIn
+    - X
+    - Website read APIs/webhooks if available
+    - Approved LLM/image/TTS/video providers
+design:
+  style: Professional enterprise, accessible data-dense workspace
+  brand_name: Spectra Technologies
+  logo: null
+  primary_color: Use approved brand assets; provisional neutral palette
+  secondary_color: Auto
+  typography: Auto
+  reference_websites:
+  - https://spectraindia.com/
+  responsive: true
+  mobile_first: true
+  dark_mode: Optional
+  light_mode: true
+  accessibility: WCAG 2.2 AA target
+  animations: Minimal
+  minimum_screen_width: 360
+  supported_browsers:
+  - Chrome
+  - Firefox
+  - Edge
+  - Safari
+  browser_support_policy: Latest two major releases where applicable
+  supported_devices:
+  - Desktop
+  - Tablet
+  - Mobile
+application:
+  multi_tenancy: One active organization; tenant-scoped schema and authorization from first migration
+  multi_language: false
+  admin_panel: true
+  content_management: true
+  user_management: true
+  role_management: true
+  audit_logs: true
+  reporting: true
+  notifications: true
+  search: true
+  import_export: true
+  subscriptions: false
+  billing: false
+  realtime_features: Polling initially
+  offline_support: false
+  feature_flags: true
+  api_documentation: true
+localization:
+  default_language: English
+  additional_languages: []
+  timezone: Asia/Kolkata
+  currency: INR
+  date_format: DD-MM-YYYY
+  locale: en-IN
+infrastructure:
+  development_os: Windows PowerShell or Linux; inspect
+  production_os: Linux recommended
+  hosting_provider: Spectra infrastructure if approved
+  deployment_platform: Docker Compose initial deployment
+  deployment_region: Confirm
+  containerization: Docker
+  orchestration: Compose; no Kubernetes without need
+  reverse_proxy: Nginx or Caddy
+  ci_cd: GitHub Actions or existing CI
+  infrastructure_as_code: Document reproducible setup; add IaC if justified
+  environments:
+  - development
+  - test
+  - staging
+  - production
+  domain: null
+  https: true
+  monitoring: true
+  logging: true
+  automated_backups: true
+  disaster_recovery: Required, targets pending
+  high_availability: Not assumed
+non_functional:
+  expected_users: Confirm pilot team size
+  concurrent_users: Confirm; measure
+  expected_data_volume: Inventory and media volume to measure
+  frontend_performance_target: Propose baseline and approve
+  api_latency_target: Propose baseline and approve; external jobs async
+  availability_target: Confirm
+  scalability: true
+  maintainability: true
+  security: true
+  accessibility: true
+  seo: Private dashboard no indexing
+  privacy_requirements:
+  - No unapproved confidential data sent to AI
+  - Minimize conversion/lead personal data
+  compliance_requirements:
+  - Review platform terms and applicable privacy laws; no compliance claims
+  data_retention: Confirm per data class/provider terms
+  recovery_time_objective: Confirm
+  recovery_point_objective: Confirm
+content:
+  provided_assets: []
+  existing_database: null
+  sample_data:
+  - Synthetic fixtures only until approved
+  api_documentation:
+  - Verify official provider docs and actual app permissions during Phase 0
+  images: []
+  brand_guidelines: null
+  client_information:
+  - Spectra owns the three source websites per project brief
+  migration_required: false
+  placeholder_content_allowed: UI/dev only; never publish
+constraints:
+  budget: Approval required; separate generation, hosting, publishing and ad spend
+  deadline: Flexible; confirm
+  team_size: Confirm
+  paid_services_allowed: Only approved provider/budget; live actions off by default
+  open_source_preferred: true
+  vendor_lock_in_preference: Minimize via adapters
+  must_use_technologies: []
+  prohibited_technologies:
+  - Unofficial social publishing bots
+  - Unapproved direct writes to website databases
+  licensing_requirements:
+  - Verify asset and dependency licenses
+  special_requirements:
+  - Unified public identity
+  - Evidence-backed claims
+  - No arbitrary AI publishing or spend tools
+  anti_goals:
+  - Premature microservices
+  - Unbounded AI retries
+  - Invented product specifications
+  - Cross-tenant access
+execution:
+  mode: Phase-wise
+  approval:
+    requirements: true
+    architecture: true
+    ui_ux_design: true
+    phase_completion: true
+    major_scope_changes: true
+    destructive_operations: true
+    production_deployment: true
+    paid_services: true
+    live_publishing: true
+    ad_campaign_activation: true
+    budget_increase: true
+  skills:
+    discovery: true
+    automatic_selection: true
+    load_on_demand: true
+    missing_skill_policy: Report and use equivalent procedure
+  agents:
+    enabled: true
+    delegation: Intelligent
+    model: inherit
+    independent_review: true
+  testing:
+    automated: true
+    manual_checklists: true
+    regression: true
+    security: true
+    combinatorial: Risk Based
+  documentation:
+    enabled: true
+    architecture_decisions: true
+    persistent_progress: true
+  communication:
+    technical_level: Software Engineer
+    infrastructure_level: Beginner Friendly
+    explain_decisions: true
+    explain_commands: true
+    report_limitations: true
+marketing:
+  sources:
+  - key: ziu
+    url: https://ziu.in/
+    goal: Product sales
+  - key: spectracloud
+    url: https://www.spectracloud.com/
+    goal: Service leads/subscriptions
+  - key: spectraindia
+    url: https://spectraindia.com/
+    goal: Enterprise inquiries
+  social_identity: Spectra Technologies
+  platforms:
+  - LinkedIn
+  - Facebook
+  - Instagram
+  - X
+  monthly_image_posts: 12
+  monthly_videos: 2
+  video_duration_seconds: 30
+  paid_ad_platforms:
+  - Facebook
+  - Instagram
+  pilot_mode: Approval required
+  live_publish_enabled: false
+  live_ads_enabled: false
+  auto_spend_enabled: false
